@@ -1,0 +1,303 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #b9dee7;
+    width: 100%;
+    height: 490px;
+}
+
+.contenedor {
+    max-width: 1366px;
+    width: 100%;
+    margin: 0px auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    padding-top: 0.7em;
+    width: 100%;
+    text-align: end;
+}
+
+.activo{
+    border-bottom: white solid 1px;
+}
+.menu a {
+    padding: 0px 0.3em;
+    color: white;
+    text-decoration: none;
+}
+
+.middlebanner {
+    display: flex;
+}
+
+.middlebanner div {
+    position: absolute;
+    top: 20%;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0% 25% 0% 25%;
+    font-family: 'Hind', sans-serif;
+    font-weight: 600;
+}
+
+
+
+#intro {
+    line-break: anywhere;
+    line-height: 1.2em;
+    padding: 2em 0;
+    box-sizing: border-box;
+}
+
+.middlebanner a {
+    background-color: rgba(0, 0, 255, 0.384);
+    color: white;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 0.3em;
+}
+
+#animacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    margin-top: -60px;
+
+}
+
+#animacion article {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+    padding: 2em;
+}
+
+#animacion article a {
+    color: #131616;
+    font-weight: bolder;
+    background-color: white;
+    padding: 1em;
+    border-radius: 71% / 68%;;
+    text-decoration: none;
+    margin-top: 0.8em;
+
+}
+
+#adop {
+    margin-bottom: 1em;
+    font-size: 3em;
+    text-align: center;
+}
+
+#uno {
+    background-color: skyblue;
+    font-weight: normal;
+    margin-bottom: 1em;
+
+}
+
+#dona {
+    margin-bottom: 1em;
+    font-size: 3em;
+    text-align: center;
+}
+
+#dos {
+    background-color: skyblue;
+    font-weight: normal;
+    margin-bottom: 1em;
+
+}
+
+#fam {
+    margin-bottom: 1em;
+    font-size: 3em;
+    text-align: center;
+}
+
+#tres {
+    background-color: skyblue;
+    font-weight: normal;
+    margin-bottom: 1em;
+}
+
+.contenedor-grid {
+    max-width: 1100px;
+    margin-top: 2em;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(80px, auto);
+    gap: 9px 9px;
+    margin-bottom: 2em;
+}
+
+.botlef{
+   margin: auto;
+   align-items: bottom; 
+   /* VER QUE ONDA QUW NO BAJAN */ 
+}
+#box1 {
+    background-image: url(img/perrito1.jpg);
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+#box2 {
+    background-image: url(img/perrito1.jpg);
+    grid-row: span 4;
+}
+
+#box3 {
+    background-image: url(img/perrito1.jpg);
+    grid-row: span 2;
+}
+
+#box4 {
+    background-image: url(img/perrito1.jpg);
+    grid-row: span 2;
+}
+
+#box5 {
+    background-image: url(img/perrito1.jpg);
+    grid-row: span 2;
+}
+
+#box6 {
+    background-image: url(img/perrito1.jpg);
+    grid-row: span 2;
+}
+
+
+.productos {
+    display: flex;
+    width: 60%;
+    padding: 20px;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.productos img {
+    width: 100%;
+
+}
+
+.productos h4 {
+    font-weight: normal;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.productos article {
+    width: 30%;
+    box-sizing: border-box;
+    background-color: #78c1d365;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+    padding: 1em;
+    margin-bottom: 1.3em;
+}
+
+.productos h2 {
+    width: 100%;
+    align-items: center;
+}
+
+.productos h5 {
+    font-size: 0.9em;
+
+}
+
+.formul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1:nth-child(1) {
+    font-size: 2em;
+    color: green;
+    font-family: 'Hind', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+form{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 100%;
+    text-transform: uppercase;
+    margin-bottom: 1.5em;
+}
+
+fieldset{
+    border: none;
+    font-family: 'Hind', sans-serif;
+    font-weight: 600;
+}
+
+fieldset input{
+    background-color: skyblue;
+    border: none;
+    width: 60%;
+}
+
+
+footer {
+    margin: auto;
+    background-color: black;
+    height: 80px;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+#logofoot {
+    position: absolute;
+    left: 10px;
+    margin: auto;
+}
+
+footer p {
+    color: white;
+    margin: auto;
+
+}
+
+footer div {
+    position: absolute;
+    right: 10px;
+    margin: auto;
+}
+
+
+@media all and (min-width:576px) {
+
+   
+}
+
+
+@media all and (min-width:768px) {
+
+  
+}
