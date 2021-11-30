@@ -1,5 +1,5 @@
 /// perritos
-
+/*
 class Perrito {
 
     constructor(nombre, genero, raza, ubicacion, edad, comentario, vacunas, microchip, desparasitado) {
@@ -25,7 +25,7 @@ class Perrito {
         this.vacunas = vacunas;
         this.microchip = microchip;
         this.desparasitado = desparasitado;
-    }
+   
 };
 
 
@@ -135,3 +135,6 @@ let jaime = new Perrito("Jaime", "Macho", "Galgo", "Carrasco", 5, "¡Conoce al m
 
 
 let perritos = [coco, max, kira, simba, nala, marko, lana, simon, buzz, kika, jaime] 
+
+
+ }*/
