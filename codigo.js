@@ -77,8 +77,9 @@ function mostrarArticulos() {
             document.querySelector(`#box${i + 1} > .botlef > h4`).innerHTML = titulo;
             document.querySelector(`#box${i + 1} > .botlef > p`).innerHTML = autor;
             document.querySelector(`#box${i + 1}`).style.backgroundImage = `url(${foto})`
-            document.querySelector(`#box${i + 1} > .botlef > a`).addEventListener("click", ampliarInfoArticulo);
-
+            document.querySelector(`#box${i + 1} > .botlef > a`).addEventListener("click", ampliarInfoArticulo.bind(null, i));
+/* preguntar por binddddddddddddddddddd */
+/* en el bind siempre primero es null y dsps el parametro q quieras */
         }
 
         else {
@@ -95,30 +96,17 @@ function mostrarArticulos() {
 
 function ampliarInfoArticulo(pos){
     document.querySelector("#ampliacion").style.display="block";
-
-
+    document.querySelector("#cerrar").addEventListener("click",cerrarModal);
 
     let ampliacion=articulos[pos];
-    console.log(ampliacion)
 
-    document.querySelector("#ampliacion").innerHTML=
-    `<h1>${ampliacion.autor.apellido}</h1>
-    <h2>${ampliacion.texto}</h2>
-    <h2>${ampliacion.autor.nombre} ${ampliacion.autor.nombre}</h2>
-    <h2>${ampliacion.fecha}</h2>`    
+    document.querySelector(".modal-articulo").innerHTML=
+    `<h1>${ampliacion.titulo}</h1>
+    <p>${ampliacion.autor.nombre} ${ampliacion.autor.apellido} - ${ampliacion.fecha}</p>
+    <img src="${ampliacion.foto}" class="modal-img"></img>
+    <p>${ampliacion.texto}</p>`    
 }
 
-
-function ventanaModal() {
-    for (let i = 0; i <= articulos.length - 1; i++) {
-
-
-        if (i < 6) {
-
-        }
-
-        else {
-
-        }
-    }
+function cerrarModal() {
+    document.querySelector("#ampliacion").style.display="none";
 }
