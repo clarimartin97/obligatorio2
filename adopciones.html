@@ -1,12 +1,146 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perros disponibles para adoptar</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
-    
+
+
+    <header>
+        <nav class="contenedor">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" width="10%" alt="Logo">
+            </a>
+
+            <div class="menu">
+                <a href="index.html" id="aquiactive" class="activo">Inicio</a>
+                <a href="adopciones.html">Adopciones disponibles</a>
+                <a href="#">Colaboraciones</a>
+                <a href="#">Perros contentos</a>
+                <a href="#"><img src="img/lupa.svg" width="3%" alt=""></a>
+                <a href="#"><img src="img/contacto.png" width="3%" alt=""></a>
+                <a href="#"><img src="img/carrito.svg" width="3%" alt=""></a>
+
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        BANNER
+    </section>
+
+    <section>
+        <div class="filtros">
+            <h2> FILTROS</h2>
+            <div>
+                <fieldset>
+                    <legend>Genero</legend>
+
+
+                    <input type="macho" name="macho" id="macho">
+                    <label for="macho">Macho</label>
+
+                    <input type="checkbox" name="hembra" id="hembra">
+                    <label for="hembra">Hembra</label>
+
+
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <select name="Raza" id="raza">
+                            <option value="todos">Todos</option>
+                    </select>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <select name="Ubicacion" id="ubicacion">
+                        <option value="todos">Todos</option>
+                    </select>
+                </fieldset>
+
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Edad</legend>
+
+                    <input type="checkbox" name="cachorro" id="cachorro">
+                    <label for="cachorro">Cachorro</label>
+
+                    <input type="checkbox" name="adultos" id="adultos">
+                    <label for="adultos">Adultos</label>
+
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+
+                    <select name="vacunas" id="vacunas">
+                        <option value="vacunas" selected disabled>Vacunas</option>
+                        <option value="vacuna1">Vacuna1</option>
+                        <option value="antirrabica">Antirrabica</option>
+                        <option value="polivalenteCanina">Polivalente Canina</option>
+                        <option value="polivalenteRabia">Polivalente Rabia</option>
+                    </select>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+
+                    <legend>Desparasitado</legend>
+
+                    <input type="radio" name="si" id="si">
+                    <label for="si">Si</label>
+
+
+                    <input type="radio" name="no" id="no">
+                    <label for="no">No</label>
+
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
+    <section class="perros">
+        <h1>PERROS DISPONIBLES EN ADOPCIÓN</h1>
+        <div id="dog1"><img src="img/perrito1.jpg" alt=""></div>
+        <div id="dog2"><img src="img/perrito2.jpg" alt=""></div>
+        <div id="dog3"> <img src="img/perrito3.jpg" alt=""></div>
+    </section>
+
+    <section class="perros">
+        <div id="dog4"><img></div>
+        <div id="dog5"><img></div>
+        <div id="dog6"><img></div>
+        <div id="dog7"><img></div>
+        <div id="dog8"><img></div>
+        <div id="dog9"><img></div>
+        <div id="dog10"><img></div>
+        <div id="dog11"><img></div>
+    </section>
+
+    <footer>
+        <img src="img/logo.png" width="5%" id="logofoot" alt="">
+
+        <p>lorem lorem lorem lorem lorem lorem</p>
+        <div>
+            <a href=""><img src="img/imgfb.png" alt=""></a>
+            <a href=""><img src="img/imgin.png" alt=""></a>
+            <a href=""><img src="img/imgln.png" alt=""></a>
+        </div>
+    </footer>
+
+
+    <script src="perritos/perritos.js"></script>
+    <script src="adopciones.js"></script>
+
 </body>
+
 </html>

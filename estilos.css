@@ -286,6 +286,7 @@ h1:nth-child(1) {
     font-weight: 600;
     text-transform: uppercase;
 }
+
 form{
     display: flex;
     justify-content: space-around;
@@ -294,7 +295,7 @@ form{
     text-transform: uppercase;
     margin-bottom: 1.5em;
 }
-
+/* 
 fieldset{
     border: none;
     font-family: 'Hind', sans-serif;
@@ -305,7 +306,7 @@ fieldset input{
     background-color: skyblue;
     border: none;
     width: 60%;
-}
+} */
 
 
 footer {
@@ -335,7 +336,22 @@ footer div {
     margin: auto;
 }
 
+.filtros{
+    display: flex;
+    flex-wrap: wrap;
 
+}
+
+.filtros>div{
+    width: 100%;
+}
+.perros{
+    display: flex;
+    flex-wrap: wrap;
+}
+.perros img{
+    width: 15%;
+}
 @media all and (min-width:576px) {
 
    
