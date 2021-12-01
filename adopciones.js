@@ -7,11 +7,13 @@ let selectVacunas = document.querySelector("#vacunas")
 
 selectRaza.addEventListener("change", filtrarPorRaza)
 selectUbicacion.addEventListener("change", filtrarPorUbicacion)
+selectVacunas.addEventListener("change", filtrarPorVacunas)
 
 
 mostrarPerritos(perritos)
 cargarSelectRazas()
 cargarSelectUbicaciones()
+cargarSelectVacunas()
 
 
 function mostrarPerritos(arrayPerritos) {
@@ -40,6 +42,13 @@ function cargarSelectUbicaciones() {
     for (let i = 0; i <= ubicaciones.length - 1; i++) {
         selectUbicacion.innerHTML += `
         <option value="${ubicaciones[i]}">${ubicaciones[i]}</option>`
+    }
+}
+
+function cargarSelectVacunas() {
+    for (let i = 0; i <= vacunas.length - 1; i++) {
+        selectVacunas.innerHTML += `
+        <option value="${i}">${vacunas[i].nombre}</option>`
     }
 }
 
@@ -78,4 +87,37 @@ function filtrarPorUbicacion() {
         mostrarPerritos(arrayFiltroUbicacion)
     }
     console.log(arrayFiltroUbicacion)
+}
+
+function filtrarPorVacunas() {
+    //Array donde van a estar los perritos con el filtro
+    let arrayFiltroVacuna = [];
+    //String con la posicion de la vacuna en el array o "todos"
+    let vacunaElegidaString = selectVacunas.value;
+    //recorremos todos los perritos
+    for (let i = 0; i <= perritos.length - 1; i++) {
+        //si se ingreso "todos" agregamos el perrito sin importar las vacunas que tenga
+        if (vacunaElegidaString === "todos" ){
+            arrayFiltroVacuna.push(perritos[i])
+        }
+        //si no se ingreso "todos":
+        else {
+            //vacunaElegidaStr tiene la posicion de la vacuna que queremos en el array, pasamos eso a Int
+            let vacunaElegidaInt = parseInt(vacunaElegidaString)
+            //traemos la vacuna que se encuentra en la posicion
+            let vacunaElegida = vacunas[vacunaElegidaInt]
+            //recorremos todas las vacunas que se dio el perrito
+            for (let j = 0; j <= perritos[i].vacunas.length - 1; j++) {
+                //si la vacuna que se dio el perrito tiene el mismo nombre que la vacunaElegida lo agregamos al array del filtro
+                if(perritos[i].vacunas[j].vacuna.nombre === vacunaElegida.nombre) {
+                    arrayFiltroVacuna.push(perritos[i])
+                }                    
+            }
+        }   
+    }
+    //si hay resultados mostramos los perritos filtrados
+    if(arrayFiltroVacuna.length > 0) {
+        mostrarPerritos(arrayFiltroVacuna)
+    }
+    console.log(arrayFiltroVacuna)
 }
