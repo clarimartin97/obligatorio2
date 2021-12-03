@@ -167,7 +167,8 @@
                     </div>
                     <div>
                         <label for="cedula">Cédula</label>
-                        <input type="number" name="cedula" id="cedula" placeholder="Escriba su cédula..." required>
+                        <input type="number" name="cedula" id="cedula" placeholder="Escriba su cédula..." onkeypress="if(this.value.length==9) return false;" required>
+                
                     </div>
                 </fieldset>
             </div>
@@ -184,9 +185,9 @@
                 </fieldset>
                 <fieldset>
                     <legend>Tienes mascotas?</legend>
-                    <input type="radio" name="mascotas" id="si">
+                    <input type="radio" name="mascotas" class="tienesmascotas">
                     <label for="si">Si</label>
-                    <input type="radio" name="mascotas"  id="no">
+                    <input type="radio" name="mascotas"  class="tienesmascotas">
                     <label for="no">No</label>
                 </fieldset>
             </div>
@@ -194,9 +195,9 @@
                 <legend>Como nos encontraste?</legend>
                 <textarea name="encontrar" id="encontraste" cols="30" rows="3"></textarea>
                 <div>
-                    <input type="checkbox" name="notificaciones" id="notificaciones">
+                    <input type="checkbox" name="terminosycondiciones" id="tya">
 
-                    <label for="">Deseo recibir notificaciones a mi e-mail</label>
+                    <label for="">Acepto términos y condiciones</label>
 
                     <button type="submit">Enviar</button>
                 </div>

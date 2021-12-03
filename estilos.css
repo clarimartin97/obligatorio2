@@ -3,6 +3,7 @@
     padding: 0px;
 }
 
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -295,6 +296,13 @@ form{
     text-transform: uppercase;
     margin-bottom: 1.5em;
 }
+
+/* DECIRLE A MARY QUE USE ESTO!!!! */
+#cedula::-webkit-outer-spin-button, #cedula::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 /* 
 fieldset{
     border: none;
