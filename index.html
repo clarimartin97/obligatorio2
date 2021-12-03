@@ -165,34 +165,38 @@
                         <label for="e-mail">E-mail</label>
                         <input type="e-mail" name="e-mail" id="e-mail" placeholder="Escriba su e-mail..." required>
                     </div>
+                    <div>
+                        <label for="cedula">Cédula</label>
+                        <input type="number" name="cedula" id="cedula" placeholder="Escriba su cédula..." required>
+                    </div>
                 </fieldset>
             </div>
             <div>
                 <fieldset>
+                    <legend>Te interesaría donar o adoptar?</legend>
                     <select name="mascotas" id="mascotas">
-                        <option value="Tienes mascotas?" disabled selected>Tienes mascotas?</option>
-                        <option value="Si">Si</option>
-                        <option value="No">No</option>
-                        <option value="Noperosi">No, pero me interesaría</option>
+                        <option value="donar o adoptar" disabled selected></option>
+                        <option value="Si">Donar</option>
+                        <option value="No">Adoptar</option>
                     </select>
 
 
                 </fieldset>
                 <fieldset>
-                    <legend>Te interesaría ayudar?</legend>
-                    <input type="radio" name="ayudar" id="si">
+                    <legend>Tienes mascotas?</legend>
+                    <input type="radio" name="mascotas" id="si">
                     <label for="si">Si</label>
-                    <input type="radio" name="noayudar" id="no">
+                    <input type="radio" name="mascotas"  id="no">
                     <label for="no">No</label>
                 </fieldset>
             </div>
             <div>
-                <legend>Cuéntanos cual sería tu mascota ideal</legend>
-                <textarea name="mascotaideal" id="ideal" cols="30" rows="3"></textarea>
+                <legend>Como nos encontraste?</legend>
+                <textarea name="encontrar" id="encontraste" cols="30" rows="3"></textarea>
                 <div>
-                    <input type="checkbox" name="aceptolosterminos" id="acep">
+                    <input type="checkbox" name="notificaciones" id="notificaciones">
 
-                    <label for="">Acepto los términos y condiciones</label>
+                    <label for="">Deseo recibir notificaciones a mi e-mail</label>
 
                     <button type="submit">Enviar</button>
                 </div>
@@ -200,6 +204,8 @@
                 </div>
             </div>
         </form>
+
+        <p id="mensaje"></p>
     </div>
     <footer>
         <img src="img/logo.png" width="5%" id="logofoot" alt="">

@@ -1,12 +1,12 @@
 // me falta el checkbox de genero q me daba error
 let selectRaza = document.querySelector("#raza")
-let selectUbicacion = document.querySelector("#ubicacion")
+let buscadorUbicacion = document.querySelector("#buscar")
 // let checkboxEdad = document.querySelector("#")
 let selectVacunas = document.querySelector("#vacunas")
 // let radioDesparasitado = document.querySelector("#")
 
 selectRaza.addEventListener("change", filtrarPorRaza)
-selectUbicacion.addEventListener("change", filtrarPorUbicacion)
+buscadorUbicacion.addEventListener("input", buscadorPorUbicacion)
 selectVacunas.addEventListener("change", filtrarPorVacunas)
 
 
@@ -21,7 +21,7 @@ function mostrarPerritos(arrayPerritos) {
         let foto = arrayPerritos[i].url;
         document.querySelector(`#dog${i + 1} >img `).src = foto;
         document.querySelector(`#dog${i + 1} `).style.display = "block" 
-    }
+    } 
 }
 
 function ocultarDivs() {
@@ -69,24 +69,23 @@ function filtrarPorRaza() {
     console.log(arrayFiltroRaza)
 }
 
-/* function filtrarPorUbicacion() {
-    let arrayFiltroUbicacion = [];
 
-    let ubicacionElegida = selectUbicacion.value;
-
-    for (let i = 0; i <= perritos.length - 1; i++) {
-
-        if(perritos[i].ubicacion === ubicacionElegida || ubicacionElegida === "todos" ){
-
-            arrayFiltroUbicacion.push(perritos[i])
-        
+function buscadorPorUbicacion(){
+    let arrayBuscadorUbicacion = [];
+    let buscar = document.querySelector("#buscar").value;
+    for(let i=0; i<=perritos.length-1; i++){
+        let ubicacionPerrito = perritos[i].ubicacion.toLowerCase()
+        if(ubicacionPerrito.includes(buscar)){
+            arrayBuscadorUbicacion.push(perritos[i]);
         }
     }
-    if(arrayFiltroUbicacion.length > 0) {
-        mostrarPerritos(arrayFiltroUbicacion)
+    if(arrayBuscadorUbicacion.length > 0) {
+        mostrarPerritos(arrayBuscadorUbicacion)
     }
-    console.log(arrayFiltroUbicacion)
-} */
+}
+    
+    
+
 
 function filtrarPorVacunas() {
     //Array donde van a estar los perritos con el filtro

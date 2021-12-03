@@ -1,3 +1,10 @@
+let nombreYApellidoValidado = false;
+let mailValidado = false;
+let cedulaValidada= false;
+let donarOAdoptarValidado = false;
+let mascotasValidado = false;
+let findUsValidado = false;
+let notificacionesValidado = false;
 
 const TOTAL_ADOPTADOS = 5670
 const TOTAL_DONADO = 8390
@@ -14,7 +21,11 @@ let intervalTotalAdoptados = setInterval(animacionTotalAdoptados, 1)
 let intervalTotalDonaciones = setInterval(animacionTotalDonado, 1)
 let intervalTotalPadrinos = setInterval(animacionTotalPadrinos, 1)
 
-mostrarArticulos()
+mostrarArticulos();
+
+document.querySelector("#e-mail").addEventListener("focusout", validarMail);
+document.querySelector("#nya").addEventListener("focusout", 
+validarNombreYApellido);
 
 function reloj() {
 
@@ -109,4 +120,74 @@ function ampliarInfoArticulo(pos){
 
 function cerrarModal() {
     document.querySelector("#ampliacion").style.display="none";
+}
+
+
+function validarNombreYApellido(){
+
+    nombreYApellidoValidado = false;
+
+    document.querySelector("#mensaje").textContent = "";
+    let nya = document.querySelector("#nya").value;
+
+    if(nya.length === 0){
+        document.querySelector("#mensaje").textContent = "Debes escribir tu nombre y apeliido";
+    }
+
+    else if(nya.split(" ").length <= 1) {
+        document.querySelector("#mensaje").textContent = "Debes escribir un apellido";
+    }
+    
+
+    else
+    {
+        document.querySelector("#mensaje").textContent = "";
+      
+        mailValidado = true;
+    }
+}
+
+function validarMail()
+{  
+    mailValidado = false;
+    document.querySelector("#mensaje").textContent = "";
+    let email = document.querySelector("#e-mail").value;
+
+    let posicionArroba=email.indexOf("@");
+    let posicionPunto=email.indexOf(".",posicionArroba);
+
+    if(email.length === 0){
+        document.querySelector("#mensaje").textContent = "Debes escribir tu mail";
+    }
+
+    else if(posicionArroba === -1)    
+    {
+        document.querySelector("#mensaje").textContent = "su mail debe contener @";
+    }
+
+    else if(posicionArroba === 0)    
+    {
+        document.querySelector("#mensaje").textContent = "su mail debe contener texto antes del @";
+    }
+
+    else if(email.charAt(posicionArroba+1) === "" || email.charAt(posicionArroba+1) === " ")
+    {
+        document.querySelector("#mensaje").textContent = "Debe tener texto despues del @";
+    }
+
+    else if(posicionPunto === -1)
+    {
+        document.querySelector("#mensaje").textContent = "su mail debe contener . despues del @";
+    }
+
+    else if(email.charAt(posicionPunto+1) === "" || email.charAt(posicionPunto+1) === " ")
+    {
+        document.querySelector("#mensaje").textContent = "su mail debe contener texto despues del .";
+    }
+
+    else
+    {
+        document.querySelector("#mensaje").textContent = "Su mail es correcto.";
+        mailValidado = true;
+    }
 }
