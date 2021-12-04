@@ -1,9 +1,6 @@
-// me falta el checkbox de genero q me daba error
 let selectRaza = document.querySelector("#raza")
 let buscadorUbicacion = document.querySelector("#buscar")
-// let checkboxEdad = document.querySelector("#")
 let selectVacunas = document.querySelector("#vacunas")
-// let radioDesparasitado = document.querySelector("#")
 
 selectRaza.addEventListener("change", filtrarPorRaza)
 buscadorUbicacion.addEventListener("input", buscadorPorUbicacion)
@@ -19,8 +16,9 @@ function mostrarPerritos(arrayPerritos) {
     ocultarDivs()
     for (let i = 0; i <= arrayPerritos.length - 1; i++) {
         let foto = arrayPerritos[i].url;
-        document.querySelector(`#dog${i + 1} >img `).src = foto;
+        document.querySelector(`#dog${i + 1}>img `).src = foto;
         document.querySelector(`#dog${i + 1} `).style.display = "block" 
+        document.querySelector(`#dog${i + 1} `).href = `productoAmpliado.html?id=${perritos[i].id}`
     } 
 }
 

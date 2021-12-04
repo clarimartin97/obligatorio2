@@ -360,6 +360,19 @@ footer div {
 .perros img{
     width: 15%;
 }
+
+#slider{
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    flex-wrap: wrap;
+}
+
+#slider img{
+width: 50%;
+}
+
+
 @media all and (min-width:576px) {
 
    
