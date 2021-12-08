@@ -91,12 +91,12 @@ function mostrarArticulos() {
 
 
         if (i < 6) {
+            //box va de 1 a 11 entonces le agregamos 1 porque la posicion de un array empieza en 0
             document.querySelector(`#box${i + 1} > .botlef > h4`).innerHTML = titulo;
             document.querySelector(`#box${i + 1} > .botlef > p`).innerHTML = autor;
             document.querySelector(`#box${i + 1}`).style.backgroundImage = `url(${foto})`
             document.querySelector(`#box${i + 1} > .botlef > a`).addEventListener("click", ampliarInfoArticulo.bind(null, i));
-            /* preguntar por binddddddddddddddddddd */
-            /* en el bind siempre primero es null y dsps el parametro q quieras */
+         
         }
 
         else {
@@ -108,8 +108,6 @@ function mostrarArticulos() {
         }
     }
 }
-
-
 
 function ampliarInfoArticulo(pos) {
     document.querySelector("#ampliacion").style.display = "block";

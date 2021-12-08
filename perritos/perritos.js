@@ -1,4 +1,3 @@
-/// perritos
 
 class Perrito {
 
